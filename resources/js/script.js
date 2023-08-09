@@ -25,6 +25,9 @@ function changeBackgroundToDark() {
     for (let counter = 0; counter < menuLinks.length; counter++) {
         menuLinks[counter].style.color = "#FFFFFF";
     }
+    for (let counter = 0; counter < pseudoLinks.length; counter++) {
+        pseudoLinks[counter].style.color = "#EAEAFA";
+    }
     for (let counter = 0; counter < linkWithWhiteBg.length; counter++) {
         linkWithWhiteBg[counter].style.color = "#DD4F4F";
     }
@@ -33,10 +36,6 @@ function changeBackgroundToDark() {
         card[counter].style.color = "#000000";
         card[counter].style.borderColor = "#FFFFFF";
         card[counter].style.backgroundColor = "#FBFBE7";
-    }
-
-    for (let counter = 0; counter < pseudoLinks.length; counter++) {
-        pseudoLinks[counter].style.color = "#EAEAFA";
     }
 }
 
@@ -65,6 +64,9 @@ function changeBackgroundToLight() {
     for (let counter = 0; counter < menuLinks.length; counter++) {
         menuLinks[counter].style.color = "#FFFFFF";
     }
+    for (let counter = 0; counter < pseudoLinks.length; counter++) {
+        pseudoLinks[counter].style.color = "#DD4F4F";
+    }
     for (let counter = 0; counter < linkWithWhiteBg.length; counter++) {
         linkWithWhiteBg[counter].style.color = "#DD4F4F";
     }
@@ -72,10 +74,6 @@ function changeBackgroundToLight() {
     for (let counter = 0; counter < card.length; counter++) {
         card[counter].style.borderColor = "#000000";
         card[counter].style.backgroundColor = "#FFFFFF";
-    }
-
-    for (let counter = 0; counter < pseudoLinks.length; counter++) {
-        pseudoLinks[counter].style.color = "#DD4F4F";
     }
 }
 
@@ -606,7 +604,9 @@ function start() {
     else {
         if (window.location.pathname != "/" && window.location.pathname != "" && window.location.pathname != "/home" &&
             window.location.pathname != "/ptbr/" && window.location.pathname != "/en/" && window.location.pathname != "/es/" &&
-            window.location.pathname != "/ptbr" && window.location.pathname != "/en" && window.location.pathname != "/es") {
+            window.location.pathname != "/ptbr" && window.location.pathname != "/en" && window.location.pathname != "/es" &&
+            window.location.pathname != "/ptbr/index.html" && window.location.pathname != "/en/index.html" 
+            && window.location.pathname != "/es/index.html" && window.location.pathname != "/index.html") {
             changeLanguage(language, "404");
         }
         else {

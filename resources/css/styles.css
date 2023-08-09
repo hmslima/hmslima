@@ -32,7 +32,7 @@
 }
 
 @font-face {
-    font-family: 'Noto Emoji';
+    font-family: 'Noto Emoji for HMSLIMA website';
     src: url(/resources/fonts/NotoEmoji-Regular.woff);
 }
 
@@ -146,7 +146,7 @@ nav {
 }
 
 .notoEmoji {
-    font-family: 'Noto Emoji Custom';
+    font-family: 'Noto Emoji for HMSLIMA website';
 }
 
 .hamburgerMenu {
@@ -338,7 +338,8 @@ footer {
 .shapeImageHome {height: 15em;}
 
 .galleryBox {text-align: center;}
-.galleryThumbnail {height: 10em; max-width: 60%; margin: 10px;} /* Se alterar aqui, não se esqueça de alterar a função JavaScript expandImage() */
+/* If you modify the height of galleryThumbnail, please don't forget to modify the JavaScript function expandImage() too */
+.galleryThumbnail {height: 10em; max-width: 60%; margin: 10px;} 
 .galleryThumbnail:hover {cursor: pointer;}
 .galleryThumbnailTitle {font-size: 2em; font-weight: bold; text-align: center;}
 
