@@ -1,0 +1,515 @@
+:root {
+    --navSize: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Dejavu Serif';
+    src: url(/resources/fonts/dejavu-serif.book.woff);
+}
+
+@font-face {
+    font-family: 'Dejavu Serif';
+    src: url(/resources/fonts/dejavu-serif.bold.woff);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Dejavu Serif';
+    src: url(/resources/fonts/dejavu-serif.italic.woff);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Dejavu Serif';
+    src: url(/resources/fonts/dejavu-serif.bold-italic.woff);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noto Emoji';
+    src: url(/resources/fonts/NotoEmoji-Regular.woff);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Dejavu Serif';
+    /* In case you edit this, don't forget to update the background in the JavaScript file!!! */
+    background-color: #FBFBE7; 
+    background-image: url(../img/background/bg-light.jpg);
+}
+
+nav {
+    width: 100%;
+    height: var(--navSize);
+    /*background-color: #800000;*/
+    background-image: url(../img/background/wood.jpg);
+    position: fixed;
+    z-index: 1;
+}
+
+.nav_space {
+    height: var(--navSize);
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+}
+
+.mobileMenuContainer {
+    display: none;
+    justify-content: flex-end;
+}
+
+.desktopMenuContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.navButtonWrapper {
+    display: flex;
+}
+
+.generalBoxedMenuButton {
+    width: var(--navSize);
+    height: var(--navSize);
+}
+
+.desktopMenuContainer .generalMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: var(--navSize);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#sub-menu .generalMenuButton {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: var(--navSize);
+    font-variant: small-caps;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.generalMenuButton:hover {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    background-color: #520808;
+}
+
+.pseudoLink {
+    cursor: pointer;
+    color: #DD4F4F;
+    font-weight: bold;
+}
+
+.hasDropCap::first-letter {
+    font-weight: bold;
+    font-size: 3.5rem;
+    float: left;
+    line-height: 1;
+    margin-right: 0.25rem;
+    margin-top: 5px;
+}
+.noIndent {
+    text-indent: 0;
+}
+
+.notoEmoji {
+    font-family: 'Noto Emoji Custom';
+}
+
+.hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.hamburgerMenuBars {
+   height: 3rem; 
+}
+
+#sub-menu {
+    display: none;
+    position: fixed;
+    float: right;
+    padding: 0.3rem;
+    min-width: 10rem;
+    /*background-color: #aa1d1d;*/
+    background-color: #644030;
+    z-index: 1;
+}
+
+.menuItemLink:hover {
+    background-color: #520808;
+}
+
+.menuLang {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.imgTextIntroduction {
+    display: flex;
+}
+
+.mainBox {
+    margin-top: 1rem;
+    min-height: 80vh;
+}
+
+.mainPhoto {
+    height: 5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+section {
+    min-height: 50vh;
+}
+
+p {
+    text-indent: 2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+ul, ol {list-style-position: inside;}
+  
+li {
+    padding-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+li ul {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
+
+a:not(.navLink) {
+    text-decoration: none;
+    color: #DD4F4F;
+    font-weight: bold;
+}
+a:visited:not(.navLink) {color: #DD4F4F}
+a:hover:not(.navLink) {text-decoration: underline;}
+
+h1 {
+    font-variant: small-caps;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+h3 {
+    font-weight: bold;
+    text-align: center;
+}
+.blogPost h3 {text-align: left;}
+
+.BigContainer {
+    width: 70%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.container-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.changeBackgroundButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-style: solid;
+    border-radius: 50px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.imgText {
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+.new_section {
+    margin-top: 3rem;
+}
+
+.card {
+    min-height: 10rem;
+    border-radius: 0 0 25px 25px;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 10px 10px 5px black;
+    margin-bottom: 2.5rem;
+}
+
+.cardTitle {
+    border-bottom: 1px outset #000000;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.cardInternContainer {display: flex; flex-flow: row wrap;}
+.cardThumbnail{flex: 1; max-width: 10rem;}
+.cardThumbnail img {width: 100%;}
+.cardDescription {flex: 1; padding-left: 1rem;}
+
+.cardTitle h3 {
+    text-align: right;
+}
+
+.stack img {
+    width: 4rem;
+}
+.svgStack {
+    filter: drop-shadow( 4px 4px 2px #383837); /* Don't forget to update the JavaScript file... */
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 0.8rem;
+}
+
+.shapeImage {shape-margin: .5em;}
+.shapeImageLeft {float: left;}
+.shapeImageRight {float: right;}
+
+.shapeImageHome {height: 15em;}
+
+.galleryBox {text-align: center;}
+.galleryThumbnail {height: 10em; max-width: 60%; margin: 10px;} /* Se alterar aqui, não se esqueça de alterar a função JavaScript expandImage() */
+.galleryThumbnail:hover {cursor: pointer;}
+.galleryThumbnailTitle {font-size: 2em; font-weight: bold; text-align: center;}
+
+.blogPost {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 25px;
+    line-height: 1.5;
+}
+.blogPostLight {background-color: rgba(255, 255, 255, 0.5);}
+.blogPostDark {background-color: rgba(0, 0, 0, 0.5);}
+
+.blogSearch {
+    text-align: right;
+}
+
+.blogPagination {
+    border-style: solid;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+.blogItem {
+    padding: 0.3rem 0.3rem 0.3rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 25px;
+}
+
+.blogDate {
+    font-size: 0.8rem;
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.bloglink {
+    display: block;
+    text-align: right;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.copiedBlogPost {
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+.underTheBlogPosts {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 50px;
+}
+.underTheBlogPosts2 {
+    border-style: solid;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.imgBlogFullWidth {
+    display: block;
+    width: 100%;
+}
+
+div.column2 img {
+    display: block;
+    width: 100%;
+}
+
+span.code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #383837;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    padding: 0.1rem;
+}
+
+div.row {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+div.column2 { /* You put it inside a div.row */
+    margin: 0px auto;
+    width: 45%;
+}
+
+div.column3 { /* You put it inside a div.row */
+    margin: 0px auto;
+    width: 30%;
+}
+
+.notFoundNumber {
+    margin-top: 1rem;
+    font-size: 10rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.notFoundNumberSubtext {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#presentation-paragraph {
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 2880px) {
+    nav {
+        background-image: url(../img/background/wood-4k.jpg);
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .BigContainer {
+        width: 80%;
+    }
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .BigContainer {width: 90%;}
+    .container {width: 80%;}
+}
+
+@media only screen and (max-width: 950px) {
+    .container {
+        width: 90%;
+    }
+    .desktopMenuContainer {
+        display: none;
+    }
+    .mobileMenuContainer {
+        display: flex;
+    }
+    .imgTextIntroduction {
+        display: block;
+    }
+    .mainPhoto {
+        display: block;
+        margin-right: 0;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .blogPost {
+        padding: 1rem;
+    }
+    .cardInternContainer {flex-flow: column;}
+    .cardThumbnail{max-width: none;}
+    .cardThumbnail img {display: block; margin: auto; padding-bottom: 0.3rem; max-width: 15rem;}
+    .cardDescription {padding-left: 0;}
+
+    .galleryThumbnail {max-width: 80%;}
+}
+
+@media only screen and (max-width: 850px) {
+    div.row {display: block;}
+    div.column2 {width: 100%;}
+    div.column3 {width: 100%;}
+    div.column2 img {margin-bottom: 1rem;}
+
+    .galleryThumbnail {max-width: "100%";}
+}

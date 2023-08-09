@@ -1,0 +1,55 @@
+<h1>Settings</h1>
+
+<h2>Change language</h2>
+
+<p>Just click in the on the desired language:</p>
+
+<ul>
+    <li><span class="pseudoLink" onclick="changeLanguage('ptbr', 'settings')">Português</span></li>
+    <li><span class="pseudoLink" onclick="changeLanguage('es', 'settings')">Español</span></li>
+</ul>
+
+<br>
+
+<h2>Toggle between dark and light mode</h2>
+
+<div class="changeBackgroundButton notoEmoji" onclick="changeBackground(false)">🌜︎</div>
+
+<br><br><br>
+
+<h2>Links</h2>
+
+<p>
+    This website is a SPA <i>(Single Page Application)</i>, but you can bookmark a specific page in a specific 
+    language through <span title="Uniform Resource Locator">URL</span> parameters:
+</p>
+
+<ul>
+    <li>Languages
+        <ul>
+            <li><a href="/?lang=en">?lang=en</a> <i>(English)</i></li> 
+            <li><a href="/?lang=ptbr">?lang=ptbr</a> <i>(Brazilian Portuguese)</i></li>
+        </ul>
+    </li>
+    <li>Pages
+        <ul>
+            <li><a href="/?page=home">?page=home</a> <i>(Home page. The default option)</i></li>
+            <li><a href="/?page=projects">?page=projects</a> <i>(Projects)</i></li>
+            <li><a href="/?page=blog">?page=blog</a> <i>(Blog)</i></li>
+            <li><a href="/?page=settings">?page=settings</a> <i>(Settings)</i></li>
+        </ul>
+    </li>
+    <li>Lighting mode
+        <ul>
+            <li><a href="/?mode=light">?mode=light</a> <i>(Light mode. Actually this one is redundant because it is the default)</i></li>
+            <li><a href="/?mode=dark">?mode=dark</a> <i>(Dark mode)</i></li>
+        </ul>
+    </li>
+    <li>You can mix these parameters by using the character <i>&</i>:
+        <ul>
+            <li><a href="/?page=project&lang=ptbr">?page=project&lang=ptbr</a> <i>(Project's page in Brazilian Portuguese)</i></li>
+            <li><a href="/?lang=en&page=projects">?lang=en&page=projects</a> <i>(Projects' page in English)</i></li>
+            <li><a href="/?page=projects&lang=ptbr&mode=dark">?page=projects&lang=ptbr&mode=dark</a> <i>(Blog in Brazilian Portuguese, and in dark mode)</i></li>
+        </ul>
+    </li>
+</ul>

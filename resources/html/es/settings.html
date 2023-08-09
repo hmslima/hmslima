@@ -1,0 +1,55 @@
+<h1>Configuraciones</h1>
+
+<h2>Cambiar idioma</h2>
+
+<p>Simplemente haga clic en el idioma deseado:</p>
+
+<ul>
+    <li><span class="pseudoLink" onclick="changeLanguage('en', 'settings')">English</span></li>
+    <li><span class="pseudoLink" onclick="changeLanguage('ptbr', 'settings')">Português</span></li>
+</ul>
+
+<br>
+
+<h2>Alternar entre el modo oscuro y el modo claro</h2>
+
+<div class="changeBackgroundButton notoEmoji" onclick="changeBackground(false)">🌜︎</div>
+
+<br><br><br>
+
+<h2>Links</h2>
+
+<p>
+    Este sitio es un SPA <i>(Single Page Application)</i>, pero usted puede marcar una página específica 
+    col un idioma específico a través de parámetros de <span title="Uniform Resource Locator">URL</span>:
+</p>
+
+<ul>
+    <li>Idiomas
+        <ul>
+            <li><a href="/?lang=es">?lang=es</a> <i>(Español)</i></li>
+            <li><a href="/?lang=en">?lang=en</a> <i>(Inglés)</i></li>
+        </ul>
+    </li>
+    <li>Páginas
+        <ul>
+            <li><a href="/?page=home">?page=home&lang=ptbr</a> <i>(Página inicial)</i></li>
+            <li><a href="/?page=project">?page=projects</a> <i>(Proyectos)</i></li>
+            <li><a href="/?page=blog">?page=blog</a> <i>(Blog)</i></li>
+            <li><a href="/?page=settings">?page=settings</a> <i>(Configuraciones)</i></li>
+        </ul>
+    </li>
+    <li>Modo de iluminación
+        <ul>
+            <li><a href="/?mode=light">?mode=light</a> <i>(Modo claro. En realidad, este parámetro es redundante porque este es el predeterminado)</i></li>
+            <li><a href="/?mode=dark">?mode=dark</a> <i>(Modo oscuro)</i></li>
+        </ul>
+    </li>
+    <li>Usted puede mezclar los parámetros a través del caracter <i>&</i>:
+        <ul>
+            <li><a href="/?page=project&lang=es">?page=project&lang=es</a> <i>(Página de proyectos en español)</i></li>
+            <li><a href="/?lang=en&page=projects">?lang=en&page=projects</a> <i>(Página de proyectos ec inglés)</i></li>
+            <li><a href="/?page=blog&lang=es&mode=dark">?page=blog&lang=es&mode=dark</a> <i>(Blog en español y en el modo oscuro)</i></li>
+        </ul>
+    </li>
+</ul>
